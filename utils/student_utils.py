@@ -58,7 +58,7 @@ def patient_dataset_splitter(df, patient_key='patient_nbr'):
 
 
 #Question 7
-def create_tf_categorical_feature_cols(categorical_col_list, vocab_dir='./diabetes_vocab/'):
+def create_tf_categorical_feature_cols(categorical_col_list, vocab_dir='./data/diabetes_vocab/'):
     '''
     categorical_col_list: list, categorical field list that will be transformed with TF feature column
     vocab_dir: string, the path where the vocabulary text files are located

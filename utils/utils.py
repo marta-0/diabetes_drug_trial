@@ -26,7 +26,7 @@ def cast_df(df, col, d_type=str):
 def impute_df(df, col, impute_value=0):
     return df[col].fillna(impute_value)
     
-def preprocess_df(df, categorical_col_list, numerical_col_list, predictor, categorical_impute_value='nan',             numerical_impute_value=0):
+def preprocess_df(df, categorical_col_list, numerical_col_list, predictor, categorical_impute_value='nan', numerical_impute_value=0):
     df[predictor] = df[predictor].astype(float)
     for c in categorical_col_list:
         df[c] = cast_df(df, c, d_type=str)
@@ -45,7 +45,7 @@ def df_to_dataset(df, predictor,  batch_size=32):
     return ds
 
 # build vocab for categorical features
-def write_vocabulary_file(vocab_list, field_name, default_value, vocab_dir='./diabetes_vocab/'):
+def write_vocabulary_file(vocab_list, field_name, default_value, vocab_dir='./data/diabetes_vocab/'):
     output_file_path = os.path.join(vocab_dir, str(field_name) + "_vocab.txt")
     # put default value in first row as TF requires
     vocab_list = np.insert(vocab_list, 0, default_value, axis=0) 
