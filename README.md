@@ -20,17 +20,17 @@ Due to healthcare PHI regulations (HIPAA, HITECH), there are limited number of p
 
 ## Project Steps
 
-### 1. Data Analysis and Preparation
+### 1. [Data Analysis and Preparation](1-Data-Preparation.ipynb)
 
 The first step of the project is to analyse the dataset and prepare it for training.
 
 [under construction]
 
-Notebook: [Data Analysis and Preparation](1-Data-Preparation.ipynb)
-
-### 2. Model Training and Evaluation
+### 2. [Model Training and Evaluation](2-Train-And-Evaluate-Model.ipynb)
 
 [under construction]
+
+![training mse and loss](images/training.png)
 
 ## License
 
