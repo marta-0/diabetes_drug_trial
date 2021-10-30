@@ -22,15 +22,42 @@ Due to healthcare PHI regulations (HIPAA, HITECH), there are limited number of p
 
 ### 1. [Data Analysis and Preparation](1-Data-Preparation.ipynb)
 
-The first step of the project is to analyse the dataset and prepare it for training.
+Analyzing the dataset:
+* null and missing values,
+* numerical features distribution,
+* cardinality,
+* demographics.
 
-[under construction]
+Preparing the dataset:
+* dimensionality reduction,
+* dataset aggregation,
+* feature selection,
+* casting and imputing,
+* train, val, test split.
+
+Example columns from the dataset:
+
+| patient_nbr | time_in_hospital* | gender |   age    | readmitted |       race      | num_medications | ... |
+|-------------|-------------------|--------|----------|------------|-----------------|-----------------|-----|
+| 48330783    | 13.0              | Female | \[80-90) | NO         | Caucasian       | 28.0            | ... |
+| 42519267    | 1.0               | Male   | \[40-50) | NO         | Caucasian       | 8.0             | ... |
+| 89869032    | 9.0               | Female | \[40-50) | >30        | AfricanAmerican | 17.0            | ... |
+
+\* - predictor field
 
 ### 2. [Model Training and Evaluation](2-Train-And-Evaluate-Model.ipynb)
 
-[under construction]
+Training the model:
+* dataset conversion to TF Dataset,
+* categorical and numerical features creation with TF Feature Column,
+* model build and training.
 
 ![training mse and loss](images/training.png)
+
+Evaluating the model:
+* model uncertainty range with TF Probability,
+* evaluation metrics,
+* model bias evaluation with Aequitas.
 
 ## License
 
